@@ -103,11 +103,17 @@ a {
   place-items: center;
   width: 36px;
   height: 36px;
-  border-radius: 10px;
-  background: var(--accent);
-  color: var(--text);
-  font-weight: 600;
-  border-radius: 6px;
+  overflow: hidden;
+  background: #08080a;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.brand-mark img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  display: block;
 }
 
 .brand-copy {

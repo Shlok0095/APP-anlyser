@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import appIcon from '../assets/app-icon.png'
 import { PRIMARY_NAV } from '../app/routes'
 
 export function Sidebar() {
@@ -6,14 +7,7 @@ export function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-brand">
         <div className="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="20" height="20">
-            <path
-              fill="none"
-              stroke="#cccccc"
-              strokeWidth="1.8"
-              d="M5 19 12 5l7 14M8.2 13h7.6"
-            />
-          </svg>
+          <img src={appIcon} alt="" width={36} height={36} />
         </div>
         <div className="brand-copy">
           <strong>Analyzer</strong>
