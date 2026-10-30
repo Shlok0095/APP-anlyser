@@ -1,0 +1,8 @@
+{
+  "name": "uaa-sample-source",
+  "version": "1.2.3",
+  "main": "src/index.js",
+  "dependencies": {
+    "express": "4.19.2"
+  }
+}

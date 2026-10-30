@@ -1,0 +1,16 @@
+node_modules
+out
+dist
+coverage
+.eslintcache
+*.log
+.DS_Store
+Thumbs.db
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.tsbuildinfo
+.env
+.env.*
+settings.json
+*.exe

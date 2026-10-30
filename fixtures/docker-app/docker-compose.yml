@@ -1,0 +1,6 @@
+services:
+  web:
+    image: uaa-sample:local
+    privileged: true
+    ports:
+      - '8080:8080'

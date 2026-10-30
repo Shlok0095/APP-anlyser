@@ -1,0 +1,31 @@
+appId: com.uaa.desktop
+productName: Universal Application Analyzer
+directories:
+  output: dist
+  buildResources: build
+files:
+  - out/**/*
+  - package.json
+extraResources:
+  - from: build/icon.png
+    to: icon.png
+win:
+  icon: build/icon.ico
+  target:
+    - nsis
+  artifactName: APP-Analyzer-Setup-${version}.${ext}
+  signExecutable: false
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: APP Analyzer
+  uninstallDisplayName: APP Analyzer
+mac:
+  target: dmg
+  icon: build/icon.png
+linux:
+  target: AppImage
+  icon: build/icon.png

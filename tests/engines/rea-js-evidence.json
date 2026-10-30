@@ -1,0 +1,80 @@
+{
+  "limitations": [
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed."
+  ],
+  "normalized_result": {
+    "input_path": "E:\\RCA\\fixtures\\source-app",
+    "format": "directory",
+    "root_artifact_sha256": "c0db968037c02ae2d42a709091820eaee9268d889bf7a1615e1267944ecd6d32",
+    "integrity_contradictions": [],
+    "graph": {
+      "schema": "JavaScriptApplicationGraph",
+      "nodes": [
+        {
+          "node_id": "pkg-1",
+          "kind": "package",
+          "observations": [
+            {
+              "label": "uaa-sample-source",
+              "properties": {
+                "path": "package.json",
+                "name": "uaa-sample-source",
+                "version": "1.2.3",
+                "main": "src/index.js"
+              }
+            }
+          ]
+        },
+        {
+          "node_id": "mod-1",
+          "kind": "javascript-module",
+          "observations": [
+            {
+              "label": "src/index.js:default",
+              "properties": {
+                "module_path": "src/index.js",
+                "semantic_role": "export-binding"
+              },
+              "evidence": {
+                "confidence": "exact",
+                "location": {
+                  "available": true,
+                  "value": {
+                    "kind": "source-range",
+                    "source": "src/index.js",
+                    "start": { "line": 11, "column": 0 }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        {
+          "node_id": "ep-1",
+          "kind": "endpoint",
+          "observations": [
+            {
+              "label": "/health",
+              "properties": {
+                "endpoint_kind": "network",
+                "value": "/health",
+                "mechanism": "call:app.get"
+              }
+            }
+          ]
+        }
+      ],
+      "edges": [
+        {
+          "source_node_id": "pkg-1",
+          "target_node_id": "mod-1",
+          "relation": "contains"
+        }
+      ]
+    },
+    "statistics": {
+      "parsed_javascript_files": 3,
+      "findings": 8
+    }
+  }
+}

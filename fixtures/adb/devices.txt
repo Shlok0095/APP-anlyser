@@ -1,0 +1,2 @@
+List of devices attached
+emulator-5554          device product:sdk_gphone model:sdk_gphone device:emulator
